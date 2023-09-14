@@ -133,12 +133,12 @@ div[class$=__container] {
 }
 @media (max-width: 767px) {
   .intro__title {
-    font-size: calc(28px + 47.6 * ((100vw - 320) / 1200));
+    font-size: calc(36px + 34 * ((100vw - 320) / 1200));
   }
 }
 @media (min-width: 300px) {
   .intro__title {
-    font-size: calc(28px + 28 * (100vw / 1200));
+    font-size: calc(36px + 20 * (100vw / 1200));
   }
 }
 
@@ -186,12 +186,12 @@ div[class$=__container] {
 }
 @media (max-width: 767px) {
   .slogan__title {
-    font-size: calc(28px + 34 * ((100vw - 320) / 1200));
+    font-size: calc(36px + 20.4 * ((100vw - 320) / 1200));
   }
 }
 @media (min-width: 300px) {
   .slogan__title {
-    font-size: calc(28px + 20 * (100vw / 1200));
+    font-size: calc(36px + 12 * (100vw / 1200));
   }
 }
 
