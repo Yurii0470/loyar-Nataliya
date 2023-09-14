@@ -1,23 +1,23 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
 
-  const form = document.querySelector('#form');
-  form.addEventListener('submit', formSend)
+//   const form = document.querySelector('#form');
+//   form.addEventListener('submit', formSend)
   
-  async function formSend(event) {
-    event.preventDefault();
+//   async function formSend(event) {
+//     event.preventDefault();
   
-    // let formData = new FormData(form);
-    // let response = await fetch('sendmail.php', {
-    //   method: 'POST',
-    //   body: formData
-    // });
-    // let result = await response.json();
-    // alert(result.massage);
-    // form.reset();
-  };
-});
+//     // let formData = new FormData(form);
+//     // let response = await fetch('sendmail.php', {
+//     //   method: 'POST',
+//     //   body: formData
+//     // });
+//     // let result = await response.json();
+//     // alert(result.massage);
+//     // form.reset();
+//   };
+// });
 
 const mobileMenu = document.querySelector('.mobile-menu'),
       nav = document.querySelector('.nav'),
