@@ -65,6 +65,10 @@ $Exo2: 'Exo 2'
 $grean:rgb(56, 162, 88)
 $blue: rgb(6, 174, 174)
 
+$bg-color: #F9F8EB
+$color3: #4682A9
+$color4: #1E2640
+
 html
   scroll-behavior: smooth
 
@@ -78,7 +82,6 @@ div[class$='__container']
   top: 0
   font-family: $Exo2
   padding-block: 10px
-  background: transparent
   backdrop-filter: blur(15px)
   z-index: 100
 
@@ -105,7 +108,7 @@ div[class$='__container']
 
 .nav__link, .phone
   text-transform: uppercase
-  color: $blue
+  color: $color3
   font-weight: 600
 
 .phone__wrapper
@@ -209,7 +212,7 @@ div[class$='__container']
   margin-inline: auto
   font-family: 'AnastasiaScriptC'
   @include adapt-font(48, 28)
-  color: #61a375
+  color: $color3
   text-align: center
 
 // ===== SLOGAN END ===== //
@@ -219,7 +222,7 @@ div[class$='__container']
 
 .services
   // height: 100dvh
-  background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5) )
+  background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(12, 141, 197, 0.2) )
 
 .services__container
   padding-block: 50px
@@ -230,7 +233,7 @@ div[class$='__container']
 
 .services__title
   @include adapt-font(48, 26)
-  color: #333
+  color: $color4
 
 .services__info
   width: 100%
@@ -273,7 +276,8 @@ div[class$='__container']
   padding: 10px
   // width: 70%
   & p
-  & ul 
+  & ul
+    padding-left: 15px
     & li
       list-style: disc
     
@@ -284,12 +288,11 @@ div[class$='__container']
 
 .certificates
   // height: 100dvh
-  background-image: linear-gradient( rgba(129, 251, 229, 0.5), rgba(255, 255, 255, 0.5))
+  background-image: linear-gradient( rgba(12, 141, 197, 0.2), rgba(255, 255, 255, 0.5))
 
 .certificates__container
   padding-top: 50px
   display: flex
-  // flex-wrap: wrap
   align-items: center
   justify-content: space-between
 
@@ -307,7 +310,7 @@ div[class$='__container']
   font-family: $Exo2
 
 .partners__title
-  color: #333
+  color: $color4
   font-size: 48px
 
 .partners__list
@@ -337,7 +340,7 @@ div[class$='__container']
 
 .reviews
   height: 100dvh
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5))
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(12, 141, 197, 0.2))
 
 .reviews__container
   padding-block: 30px
@@ -357,7 +360,7 @@ div[class$='__container']
 
 .contacts
   // height: 100dvh
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5))
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(12, 141, 197, 0.2))
 
 
 .contacts__container
@@ -387,7 +390,6 @@ div[class$='__container']
   max-width: 500px
   height: 450px
   background: transparent
-  border: 2px solid rgba(0, 20, 238, 0.5)
   border-radius: 20px
   backdrop-filter: blur(15px)
   display: flex
@@ -397,28 +399,26 @@ div[class$='__container']
 h2
   font-size: 2em
   font-weight: 600
-  color: $grean
+  color: $color3
   text-align: center
 
 h3
   font-size: 1.5em
   font-weight: 600
-  color: $grean
+  color: $color3
   text-align: center
 
 
 .inputbox
   position: relative
-  // margin: 30px 0
   width: 100%
-  // max-width: 310px
-  border-bottom: 2px solid #ed6300d2
+  border-bottom: 2px solid $color4
   & label
     position: absolute
     top: 50%
     left: 5px
     transform: translateY(-50%)
-    color: $grean
+    color: $color3
     font-size: 1em
     pointer-events: none
     transition: 0.5s
@@ -430,7 +430,7 @@ h3
     outline: none
     font-size: 1em
     padding: 0 35px 0 5px
-    color: $grean
+    color: $color4
   & textarea
     width: 95%
     height: 100px
@@ -439,10 +439,10 @@ h3
     outline: none
     font-size: 1em
     padding: 0 35px 0 5px
-    color: $grean
+    color: $color4
     resize: none
     &::placeholder
-      color: $grean
+      color: $color4
       font-size: 1.2em
 
 .inputbox:has(textarea)
@@ -454,7 +454,7 @@ h3
   & ion-icon
     position: absolute
     right: 8px
-    color: $grean
+    color: $color4
     font-size: 1.2em
     top: 20px
 
@@ -469,7 +469,7 @@ textarea:valid ~ label
 .forget
   margin: -15px 0 15px
   font-size: .9em
-  color: $grean
+  color: $color4
   display: flex
   justify-content: center
 
@@ -477,22 +477,25 @@ textarea:valid ~ label
     & input
       margin-right: 3px
     & a
-      color: $grean
+      color: $color4
       text-decoration: none
       &:hover
         text-decoration: underline
-
 button
   width: 50%
   height: 40px
   border-radius: 40px
-  background: #2507d3
   border: none
   outline: none
   cursor: pointer
   font-size: 1em
-  color: $blue
+  color: $color3
   font-weight: 600
+
+form 
+  & button
+    background: $color4
+    color: white
 
 .register
   font-size: .9em
@@ -508,7 +511,35 @@ button
         text-decoration: underline
 //  FORM END
 
+.contacts__ineer
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 10px
+
+.contacts__title
+  color: $color3
+  font-size: 32px
+  font-family: $Exo2
+
+.contacts__social
+  display: flex
+  justify-content: center
+  gap: 20px
+
+.contacts__phone, .contacts__adress
+  color: $color3
+  font-size: 1.2rem
+  font-family: $Exo2
+
+
+.social__img
+  width: 45px
+  height: 45px
+  border-radius: 50%
+
 .contacts__location
+  margin-top: 10px
   & iframe
     width: 500px
     
@@ -609,11 +640,11 @@ button
     right: 10px
     background: transparent
     backdrop-filter: blur(15px)
-    margin-top: -500%
+    margin-top: -300%
     background: transparent
     border-radius: 30px
     backdrop-filter: blur(15px)
-    transition: all 2s ease
+    transition: all .5s ease
     & .nav__items
       height: 100%
       flex-direction: column

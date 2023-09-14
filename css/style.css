@@ -47,7 +47,6 @@ div[class$=__container] {
   top: 0;
   font-family: "Exo 2";
   padding-block: 10px;
-  background: transparent;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   z-index: 100;
@@ -76,7 +75,7 @@ div[class$=__container] {
 
 .nav__link, .phone {
   text-transform: uppercase;
-  color: rgb(6, 174, 174);
+  color: #4682A9;
   font-weight: 600;
 }
 
@@ -181,7 +180,7 @@ div[class$=__container] {
   width: 90%;
   margin-inline: auto;
   font-family: "AnastasiaScriptC";
-  color: #61a375;
+  color: #4682A9;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -196,7 +195,7 @@ div[class$=__container] {
 }
 
 .services {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(12, 141, 197, 0.2));
 }
 
 .services__container {
@@ -208,7 +207,7 @@ div[class$=__container] {
 }
 
 .services__title {
-  color: #333;
+  color: #1E2640;
 }
 @media (max-width: 767px) {
   .services__title {
@@ -259,12 +258,15 @@ div[class$=__container] {
 .text__wrapper {
   padding: 10px;
 }
+.text__wrapper ul {
+  padding-left: 15px;
+}
 .text__wrapper ul li {
   list-style: disc;
 }
 
 .certificates {
-  background-image: linear-gradient(rgba(129, 251, 229, 0.5), rgba(255, 255, 255, 0.5));
+  background-image: linear-gradient(rgba(12, 141, 197, 0.2), rgba(255, 255, 255, 0.5));
 }
 
 .certificates__container {
@@ -287,7 +289,7 @@ div[class$=__container] {
 }
 
 .partners__title {
-  color: #333;
+  color: #1E2640;
   font-size: 48px;
 }
 
@@ -316,7 +318,7 @@ div[class$=__container] {
 
 .reviews {
   height: 100dvh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(12, 141, 197, 0.2));
 }
 
 .reviews__container {
@@ -333,7 +335,7 @@ div[class$=__container] {
 }
 
 .contacts {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(12, 141, 197, 0.2));
 }
 
 .contacts__container {
@@ -363,7 +365,6 @@ div[class$=__container] {
   max-width: 500px;
   height: 450px;
   background: transparent;
-  border: 2px solid rgba(0, 20, 238, 0.5);
   border-radius: 20px;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
@@ -375,28 +376,28 @@ div[class$=__container] {
 h2 {
   font-size: 2em;
   font-weight: 600;
-  color: rgb(56, 162, 88);
+  color: #4682A9;
   text-align: center;
 }
 
 h3 {
   font-size: 1.5em;
   font-weight: 600;
-  color: rgb(56, 162, 88);
+  color: #4682A9;
   text-align: center;
 }
 
 .inputbox {
   position: relative;
   width: 100%;
-  border-bottom: 2px solid rgba(237, 99, 0, 0.8235294118);
+  border-bottom: 2px solid #1E2640;
 }
 .inputbox label {
   position: absolute;
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
-  color: rgb(56, 162, 88);
+  color: #4682A9;
   font-size: 1em;
   pointer-events: none;
   transition: 0.5s;
@@ -409,7 +410,7 @@ h3 {
   outline: none;
   font-size: 1em;
   padding: 0 35px 0 5px;
-  color: rgb(56, 162, 88);
+  color: #1E2640;
 }
 .inputbox textarea {
   width: 95%;
@@ -419,15 +420,15 @@ h3 {
   outline: none;
   font-size: 1em;
   padding: 0 35px 0 5px;
-  color: rgb(56, 162, 88);
+  color: #1E2640;
   resize: none;
 }
 .inputbox textarea::-moz-placeholder {
-  color: rgb(56, 162, 88);
+  color: #1E2640;
   font-size: 1.2em;
 }
 .inputbox textarea::placeholder {
-  color: rgb(56, 162, 88);
+  color: #1E2640;
   font-size: 1.2em;
 }
 
@@ -440,7 +441,7 @@ h3 {
 .inputbox:has(textarea) ion-icon {
   position: absolute;
   right: 8px;
-  color: rgb(56, 162, 88);
+  color: #1E2640;
   font-size: 1.2em;
   top: 20px;
 }
@@ -458,7 +459,7 @@ textarea:valid ~ label {
 .forget {
   margin: -15px 0 15px;
   font-size: 0.9em;
-  color: rgb(56, 162, 88);
+  color: #1E2640;
   display: flex;
   justify-content: center;
 }
@@ -466,7 +467,7 @@ textarea:valid ~ label {
   margin-right: 3px;
 }
 .forget label a {
-  color: rgb(56, 162, 88);
+  color: #1E2640;
   text-decoration: none;
 }
 .forget label a:hover {
@@ -477,13 +478,17 @@ button {
   width: 50%;
   height: 40px;
   border-radius: 40px;
-  background: #2507d3;
   border: none;
   outline: none;
   cursor: pointer;
   font-size: 1em;
-  color: rgb(6, 174, 174);
+  color: #4682A9;
   font-weight: 600;
+}
+
+form button {
+  background: #1E2640;
+  color: white;
 }
 
 .register {
@@ -501,6 +506,40 @@ button {
   text-decoration: underline;
 }
 
+.contacts__ineer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts__title {
+  color: #4682A9;
+  font-size: 32px;
+  font-family: "Exo 2";
+}
+
+.contacts__social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contacts__phone, .contacts__adress {
+  color: #4682A9;
+  font-size: 1.2rem;
+  font-family: "Exo 2";
+}
+
+.social__img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.contacts__location {
+  margin-top: 10px;
+}
 .contacts__location iframe {
   width: 500px;
 }
@@ -576,11 +615,11 @@ button {
     background: transparent;
     -webkit-backdrop-filter: blur(15px);
             backdrop-filter: blur(15px);
-    margin-top: -500%;
+    margin-top: -300%;
     background: transparent;
     border-radius: 30px;
     backdrop-filter: blur(15px);
-    transition: all 2s ease;
+    transition: all 0.5s ease;
   }
   .nav__mobile-hide .nav__items {
     height: 100%;
