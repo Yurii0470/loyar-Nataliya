@@ -1,0 +1,672 @@
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  border: 0
+  box-sizing: border-box
+
+a 
+  text-decoration: none
+
+ul, li, ol 
+  list-style: none
+
+img
+  vertical-align: top
+
+h1, h2, h3, h4, h5, h6 
+  font-weight: inherit
+  font-size: inherit
+
+html, body 
+  height: 100%
+  line-height: 1
+
+
+// TO %
+@function prc($pxOne, $pxTwo) 
+  $result: ($pxOne / $pxTwo) * 100%
+  @return $result
+
+// TO REM
+@function rem($px) 
+  $result: ($px / 16) + rem
+  @return $result
+
+// TO EM
+@function em($px) 
+  $result: ($px / 16) + em
+  @return $result
+
+// ---------- Адаптив тевсту ---------- //
+$maxWidth: 1200// значення без PX
+@mixin adapt-font($pcSize, $mobSize)
+  $addSize: $pcSize - $mobSize
+  $addMobSize: $addSize + $addSize * 0.7
+  @media (max-width: 767px) 
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320) / #{$maxWidth}))
+  @media (min-width: 300px) 
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}))
+
+//------ Для виклику значення @include adapt-font(18, 16)-------- //
+
+//---- ЗМІННІ -----///variables
+
+// $color: 
+
+@import url(/fonts/anastasiascriptc.otf)
+@import url(https://fonts.googleapis.com/css?family=Exo+2:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic)
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap')
+
+@font-face 
+  font-family: 'AnastasiaScriptC'
+  src: url('/font/anastasiascriptc.otf') format('opentype')
+
+$Exo2: 'Exo 2'
+$grean:rgb(56, 162, 88)
+$blue: rgb(6, 174, 174)
+$red: rgba(333, 333, 333)
+
+html
+  scroll-behavior: smooth
+
+div[class$='__container']
+  margin-inline: auto
+
+// ===== HEADER START ===== //
+.header
+  // position: sticky
+  width: 100%
+  top: 0
+  font-family: $Exo2
+  padding-block: 10px
+  background: transparent
+  backdrop-filter: blur(15px)
+  z-index: 100
+
+.header__container
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.header__logo
+  & img
+    width: 70px
+
+.nav
+  width: 100%
+  max-width: 400px
+  z-index: 1000
+
+
+.nav__items
+  display: flex
+  justify-content: space-between
+
+.nav__item
+
+.nav__link, .phone
+  text-transform: uppercase
+  color: $blue
+  font-weight: 600
+
+.phone__wrapper
+  min-width: 164.719px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 5px
+
+  cursor: pointer
+  & img
+    width: 25px
+    height: 25px
+    color: #76229a
+
+.mobile-menu
+  cursor: pointer
+  display: none
+
+.nav__mobile-open
+  margin-right: 0px
+  
+
+
+
+// ===== HEADER END ===== //
+
+// ===== MAIN START ===== //
+
+.main
+  // margin-top: 90px
+  
+
+// ===== MAIN END ===== //
+
+// ===== INTRO START ===== //
+
+.intro
+  height: calc( 100dvh - 90px )
+  min-height: 650px
+  background-color: #333
+  background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/intro__bg.jpg)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  transform: scaleX(-1) // розвертає картинку на 180 deg
+  
+  
+
+.intro__container
+  height: inherit
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-around
+  transform: scaleX(-1) 
+  padding-block: 25px
+
+.intro__title
+  font-family: 'AnastasiaScriptC'
+  color: rgb(255, 255, 255)
+  width: 100%
+  max-width: 300px
+  letter-spacing: .25rem
+  @include adapt-font(56, 28)
+
+.intro__info
+  max-width: 50%
+  width: 100%
+  max-width: 360px
+  min-width: 300px
+  & ul
+    color: white
+    margin-top: rem(30)
+    @include adapt-font(24, 18)
+    & li
+      font-family: $Exo2
+      margin-top: rem(10)
+
+
+.intro__img
+  width: 100%
+  max-width: 400px
+
+  border-radius: 35% 0px 35% 0px
+
+
+  
+
+// ===== INTRO END ===== //
+
+// ===== SLOGAN START ===== //
+
+.slogan
+  padding-block: 35px
+
+.slogan__container
+
+.slogan__title
+  width: 90%
+  margin-inline: auto
+  font-family: 'AnastasiaScriptC'
+  @include adapt-font(48, 28)
+  color: #61a375
+  text-align: center
+
+// ===== SLOGAN END ===== //
+
+
+// ===== SERVICES START ===== //
+
+.services
+  // height: 100dvh
+  background-image: linear-gradient( rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5) )
+
+.services__container
+  padding-block: 50px
+  font-family: $Exo2
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.services__title
+  @include adapt-font(48, 26)
+  color: #333
+
+.services__info
+  width: 100%
+  margin-inline: auto
+  margin-top: 50px
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+
+.accordion__wrapper
+  overflow: hidden
+  width: 100%
+  max-width: 620px
+  // transform: translateX(25%)
+  // text-align: center
+  // max-width: 750px
+  // margin-inline: auto
+  &:last-child
+    border-bottom: 1px solid black
+
+.accordion
+  cursor: pointer
+  width: 100%
+  border-radius: 0
+  text-align: left
+  padding-left: 10px
+  background: transparent
+  border-top: 1px solid black
+  // margin-inline: auto
+
+
+.panel
+  display: block
+  transition: max-height 1s ease
+  
+
+.text__wrapper
+  padding: 10px
+  // width: 70%
+  & p
+  & ul 
+    & li
+      list-style: disc
+    
+
+// ===== SERVICES END ===== //
+
+// ===== CERTIFICATES START ===== //
+
+.certificates
+  // height: 100dvh
+  background-image: linear-gradient( rgba(129, 251, 229, 0.5), rgba(255, 255, 255, 0.5))
+
+.certificates__container
+  display: flex
+  // flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+
+.certificates__img
+  width: 45%
+
+// ===== CERTIFICATES END ===== //
+
+// ===== PARTNERS START ===== //
+
+.partners
+  padding-block: 50px
+
+.partners__container
+  font-family: $Exo2
+
+.partners__title
+  color: #333
+  font-size: 48px
+
+.partners__list
+  margin-top: 50px
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-around
+
+.partners__item
+  width: 100%
+  max-width: 200px
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 10px
+  & img
+    width: 189px
+
+  & figcaption 
+    text-align: center
+
+// ===== PARTNERS END ===== //
+
+
+// ===== REVIEWS START ===== //
+
+.reviews
+  height: 100dvh
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5))
+
+.reviews__container
+  padding-block: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+.reviews__title
+  color: white
+  font-size: 48px
+
+// ===== REVIEWS END ===== //
+
+
+// ===== CONTACTS START ===== //
+
+.contacts
+  // height: 100dvh
+  background-image: linear-gradient( rgba(129, 251, 229, 0.5), rgba(255, 255, 255, 0.5))
+
+
+.contacts__container
+  padding-top: 100px
+  padding-bottom: 50px
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+  flex-wrap: wrap
+  row-gap: 20px
+
+//  FORM START
+
+.form-value
+  height: 100%
+  & form
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    // gap: 20px
+    justify-content: space-evenly
+
+.form-box
+  position: relative
+  width: 100%
+  max-width: 400px
+  height: 450px
+  background: transparent
+  border: 2px solid rgba(255, 255, 255, 0.5)
+  border-radius: 20px
+  backdrop-filter: blur(15px)
+  display: flex
+  align-items: center
+  justify-content: center
+
+h2
+  font-size: 2em
+  font-weight: 600
+  color: $grean
+  text-align: center
+
+h3
+  font-size: 1.5em
+  font-weight: 600
+  color: $grean
+  text-align: center
+
+
+.inputbox
+  position: relative
+  // margin: 30px 0
+  width: 100%
+  max-width: 310px
+  border-bottom: 2px solid #ed6300d2
+  & label
+    position: absolute
+    top: 50%
+    left: 5px
+    transform: translateY(-50%)
+    color: $grean
+    font-size: 1em
+    pointer-events: none
+    transition: 0.5s
+  & input
+    width: 95%
+    height: 50px
+    background: transparent
+    border: none
+    outline: none
+    font-size: 1em
+    padding: 0 35px 0 5px
+    color: $grean
+  & textarea
+    width: 95%
+    height: 100px
+    background: transparent
+    border: none
+    outline: none
+    font-size: 1em
+    padding: 0 35px 0 5px
+    color: $grean
+    resize: none
+    &::placeholder
+      color: $grean
+      font-size: 1.2em
+
+.inputbox:has(textarea)
+  margin-top: 10px
+  & label
+    top: 15px
+    
+
+  & ion-icon
+    position: absolute
+    right: 8px
+    color: $grean
+    font-size: 1.2em
+    top: 20px
+
+input:focus ~ label,
+input:valid ~ label
+  top: -5px
+
+textarea:focus ~ label,
+textarea:valid ~ label
+  top: -15px
+
+.forget
+  margin: -15px 0 15px
+  font-size: .9em
+  color: $grean
+  display: flex
+  justify-content: center
+
+  & label
+    & input
+      margin-right: 3px
+    & a
+      color: $grean
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+button
+  width: 90%
+  height: 40px
+  border-radius: 40px
+  background: #fff
+  border: none
+  outline: none
+  cursor: pointer
+  font-size: 1em
+  color: $blue
+  font-weight: 600
+
+.register
+  font-size: .9em
+  color: #fff
+  text-align: center
+  margin: 25px 0 10px
+  & p 
+    & a
+      text-decoration: none
+      color: #fff
+      font-weight: 600
+      &:hover
+        text-decoration: underline
+//  FORM END
+
+.contacts__location
+  & iframe
+    width: 500px
+    
+
+// ===== CONTACTS END ===== //
+
+
+// ===== FOOTER START ===== //
+
+.footer
+
+.footer__container
+
+
+
+// ===== FOOTER END ===== //
+
+
+
+
+
+
+
+//----- АДАПТИВ ------//
+
+@media (min-width: 320px) 
+  div[class$='__container']
+    max-width: 95%
+    padding-inline: 5px 
+
+@media (min-width: 480px) 
+  div[class$='__container']
+    max-width: 95%
+    padding-inline: 10px 
+
+@media (min-width: 768px) 
+  div[class$='__container']
+    max-width: 95%
+    padding-inline: 14px
+
+@media (min-width: 1000px) 
+  div[class$='__container']
+    max-width: 95%
+    padding-inline: 20px
+
+@media (min-width: 1200px) 
+  div[class$='__container']
+    max-width: 95%
+    padding-inline: 30px
+  
+  .nav__item
+    position: relative
+    display: flex
+    align-items: center
+    flex-direction: column
+    &::after
+      content: ''
+      left: 0
+      bottom: 0
+      width: 0px
+      height: 2px
+      background-color: #f4e300
+      margin-top: 3px
+      transition: width 1s ease  
+    &:hover::after
+        width: 100%
+        
+
+@media (min-width: 1440px) 
+  div[class$='__container']
+    max-width: 1340px
+    padding-inline: 50px
+
+
+
+
+
+
+@media (max-width: 1440px) 
+
+
+@media (max-width: 1200px) 
+
+
+@media (max-width: 1000px) 
+
+
+@media (max-width: 768px) 
+  .header
+    background-color: #fff
+    backdrop-filter: none
+    z-index: 999
+  .nav__mobile-hide
+    position: fixed
+    top: 90px
+    width: 300px
+    height: 400px
+    right: 10px
+    background: transparent
+    backdrop-filter: blur(15px)
+    margin-top: -500%
+    background: transparent
+    border-radius: 30px
+    backdrop-filter: blur(15px)
+    transition: all 2s ease
+    & .nav__items
+      height: 100%
+      flex-direction: column
+      align-items: center
+      justify-content: space-evenly
+
+  .nav__mobile-open
+    margin-top: 0px
+      
+
+    
+  .mobile-menu
+    display: block
+
+  .intro
+    height: 100%
+    padding-block: 30px
+
+  .certificates__container
+    flex-direction: column
+    gap: 15px
+    & .certificates__img
+      width: 90%
+
+@media (max-width: 721px)
+  .intro__container
+    gap: 20px
+  .intro__info
+    & ul
+      & li
+        text-align: center
+  .intro__title
+    margin-inline: auto
+
+@media (max-width: 560px) 
+  .contacts__location
+    & iframe
+      width: 400px
+
+@media (max-width: 480px) 
+  .contacts__location
+    & iframe
+      width: 300px
+
+  #form
+    & h2
+      font-size: 1.5rem
+    & h3
+      width: 80%
+      font-size: 1.2rem
+    & .inputbox
+      width: 90%
+
+
+
+
+  
