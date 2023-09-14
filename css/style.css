@@ -33,7 +33,7 @@ html, body {
 
 @font-face {
   font-family: "AnastasiaScriptC";
-  src: url("/font/anastasiascriptc.otf") format("opentype");
+  src: local("AnastasiaScriptC"), url("anastasiascriptc.otf") format("opentype");
 }
 html {
   scroll-behavior: smooth;
