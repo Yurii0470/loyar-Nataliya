@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loyar</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="icon" href="img/2.svg">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" data-aos="fade-down">
       <div class="header__container">
         <a class="header__logo">
           <img src="img/logo.webp" alt="logo">
@@ -36,7 +37,7 @@
     <main class="main">
       <section class="intro">
         <div class="intro__container">
-          <div class="intro__info">
+          <div class="intro__info" data-aos="fade-up">
             <h2 class="intro__title">Колодяжна Наталія Вікторівна</h2>
             <ul>
               <li>Понад 12 років юридичного стажу в галузі захисту підприємницької діяльності</li>
@@ -45,11 +46,11 @@
             </ul>
             
           </div>
-          <img class="intro__img" src="img/intro2.jpg" alt="Intro IMG">
+          <img class="intro__img" data-aos="fade-left" src="img/intro2.jpg" alt="Intro IMG">
         </div>
       </section>
       <section class="slogan">
-        <div class="slogan__container">
+        <div class="slogan__container" data-aos="fade-up">
           <h1 class="slogan__title">Кожен має право на професійну правничу допомогу <br> (стаття 59 Конституції України)</h1>
         </div>
       </section>
@@ -58,7 +59,7 @@
           <h2 class="services__title">Послуги адвоката в Луцьку та області</h2>
           <div class="services__info">
   
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion">Судове представництво</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -67,7 +68,7 @@
               </div>
             </div>
 
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion">Кредитні спори</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -76,7 +77,7 @@
               </div>
             </div>
 
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion">Банкруцтво, ліквідація</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -85,7 +86,7 @@
               </div>
             </div>
 
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion">Kримінальне право</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -94,7 +95,7 @@
               </div>
             </div>
 
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion">Військові справи</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -107,7 +108,7 @@
               </div>
             </div>
 
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion">Цивільні справи</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -121,7 +122,7 @@
               </div>
             </div>
 
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion">Податкові справи</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -139,7 +140,7 @@
               </div>
             </div>
 
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion">Адвокат по ДТП</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -148,7 +149,7 @@
               </div>
             </div>
 
-            <div class="accordion__wrapper">
+            <div class="accordion__wrapper" data-aos="fade-up">
               <button class="accordion" >Господарські справи</button>
               <div class="panel" style="max-height: 0px;" hidden>
                 <div class="text__wrapper">
@@ -166,19 +167,19 @@
       </section>
       <section id="certificates" class="certificates">
         <div class="certificates__container">
-          <img class="certificates__img" src="img/sertificat.jpg" alt="Sergificat">
-          <img class="certificates__img" src="img/sertificat2.jpg" alt="Sergificat">
+          <img data-aos="fade-right" class="certificates__img" src="img/sertificat.jpg" alt="Sergificat">
+          <img data-aos="fade-left" class="certificates__img" src="img/sertificat2.jpg" alt="Sergificat">
         </div>
       </section>
       <section id="partners" class="partners">
         <div class="partners__container">
           <h2 class="partners__title">Партнери</h2>
           <div class="partners__list">
-            <figure class="partners__item">
+            <figure class="partners__item" data-aos="flip-left">
               <img src="https://thumb.tildacdn.com/tild3833-3138-4532-a537-316465613430/-/cover/226x152/center/center/-/format/webp/LegalAid.jpg" alt="Безоплатна правова допомога">
               <figcaption>Безоплатна правова допомога</figcaption>
             </figure>
-            <figure class="partners__item">
+            <figure class="partners__item" data-aos="flip-right">
               <img src="https://thumb.tildacdn.com/tild3965-3235-4734-b037-363861336431/-/resize/518x/-/format/webp/logo_dark.png" alt="Юридична Компанія «Правова Допомога №1»">
               <figcaption> Юридична Компанія «Правова Допомога №1» </figcaption>
             </figure>
@@ -194,8 +195,8 @@
         </div>
       </section> -->
       <section id="contacts" class="contacts">
-        <div class="contacts__container">
-          <div class="form-box">
+        <div class="contacts__container" >
+          <div class="form-box" data-aos="zoom-in-down">
             <div class="form-value">
               <form id="form" action="sendmail.php" method="POST">
                 <h2>Потрібна консультація?</h2>
@@ -221,7 +222,7 @@
               
             </div>
           </div>
-          <div class="contacts__info">
+          <div class="contacts__info" data-aos="zoom-in-down">
             <div class="contacts__ineer">
               <h4 class="contacts__title">Контакти:</h4>
               <a class="contacts__phone" href="tel:+380677478988">+38 067 747 89 88</a>
@@ -248,5 +249,9 @@
   
 
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
