@@ -64,7 +64,6 @@ $maxWidth: 1200// значення без PX
 $Exo2: 'Exo 2'
 $grean:rgb(56, 162, 88)
 $blue: rgb(6, 174, 174)
-$red: rgba(333, 333, 333)
 
 html
   scroll-behavior: smooth
@@ -235,6 +234,7 @@ div[class$='__container']
 
 .services__info
   width: 100%
+  max-width: 1239px
   margin-inline: auto
   margin-top: 50px
   display: flex
@@ -287,6 +287,7 @@ div[class$='__container']
   background-image: linear-gradient( rgba(129, 251, 229, 0.5), rgba(255, 255, 255, 0.5))
 
 .certificates__container
+  padding-top: 50px
   display: flex
   // flex-wrap: wrap
   align-items: center
@@ -346,7 +347,7 @@ div[class$='__container']
   flex-direction: column
 
 .reviews__title
-  color: white
+  color: #333
   font-size: 48px
 
 // ===== REVIEWS END ===== //
@@ -356,7 +357,7 @@ div[class$='__container']
 
 .contacts
   // height: 100dvh
-  background-image: linear-gradient( rgba(129, 251, 229, 0.5), rgba(255, 255, 255, 0.5))
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(129, 251, 229, 0.5))
 
 
 .contacts__container
@@ -383,10 +384,10 @@ div[class$='__container']
 .form-box
   position: relative
   width: 100%
-  max-width: 400px
+  max-width: 500px
   height: 450px
   background: transparent
-  border: 2px solid rgba(255, 255, 255, 0.5)
+  border: 2px solid rgba(0, 20, 238, 0.5)
   border-radius: 20px
   backdrop-filter: blur(15px)
   display: flex
@@ -410,7 +411,7 @@ h3
   position: relative
   // margin: 30px 0
   width: 100%
-  max-width: 310px
+  // max-width: 310px
   border-bottom: 2px solid #ed6300d2
   & label
     position: absolute
@@ -482,10 +483,10 @@ textarea:valid ~ label
         text-decoration: underline
 
 button
-  width: 90%
+  width: 50%
   height: 40px
   border-radius: 40px
-  background: #fff
+  background: #2507d3
   border: none
   outline: none
   cursor: pointer
