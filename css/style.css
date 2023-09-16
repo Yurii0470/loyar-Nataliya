@@ -601,11 +601,6 @@ form button {
     padding-inline: 50px;
   }
 }
-@media (max-width: 1000px) {
-  .intro {
-    height: 100%;
-  }
-}
 @media (max-width: 768px) {
   .header {
     background-color: #fff;
@@ -641,6 +636,7 @@ form button {
     display: block;
   }
   .intro {
+    height: 100%;
     padding-block: 30px;
   }
   .certificates__container {
