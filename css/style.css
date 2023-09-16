@@ -603,7 +603,6 @@ form button {
 @media (max-width: 829px) {
   .intro {
     height: 100%;
-    padding-block: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -639,6 +638,9 @@ form button {
   }
   .mobile-menu {
     display: block;
+  }
+  .intro {
+    padding-block: 30px;
   }
   .certificates__container {
     flex-direction: column;
