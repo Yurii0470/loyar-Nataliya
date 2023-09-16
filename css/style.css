@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html, body {
+  height: 100%;
   line-height: 1;
 }
 
@@ -599,6 +600,12 @@ form button {
     padding-inline: 50px;
   }
 }
+@media (max-width: 1000px) {
+  .intro {
+    height: 100%;
+    padding-block: 30px;
+  }
+}
 @media (max-width: 768px) {
   .header {
     background-color: #fff;
@@ -632,10 +639,6 @@ form button {
   }
   .mobile-menu {
     display: block;
-  }
-  .intro {
-    height: 100%;
-    padding-block: 30px;
   }
   .certificates__container {
     flex-direction: column;
