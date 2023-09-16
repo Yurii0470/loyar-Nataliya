@@ -600,6 +600,12 @@ form button {
     padding-inline: 50px;
   }
 }
+@media (max-width: 829px) {
+  .intro {
+    height: 100%;
+    padding-block: 30px;
+  }
+}
 @media (max-width: 768px) {
   .header {
     background-color: #fff;
@@ -633,10 +639,6 @@ form button {
   }
   .mobile-menu {
     display: block;
-  }
-  .intro {
-    height: 100%;
-    padding-block: 30px;
   }
   .certificates__container {
     flex-direction: column;
