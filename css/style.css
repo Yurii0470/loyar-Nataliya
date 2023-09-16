@@ -600,7 +600,7 @@ form button {
     padding-inline: 50px;
   }
 }
-@media (max-width: 829px) {
+@media (max-width: 1000px) {
   .intro {
     height: 100%;
   }
