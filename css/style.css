@@ -271,6 +271,7 @@ div[class$=__container] {
 }
 
 .certificates__container {
+  overflow: hidden;
   padding-top: 50px;
   display: flex;
   align-items: center;
