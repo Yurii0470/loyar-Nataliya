@@ -1,23 +1,33 @@
 'use strict';
 
-// document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
-//   const form = document.querySelector('#form');
-//   form.addEventListener('submit', formSend)
+  const form = document.getElementById('form');
+  form.addEventListener('submit', formSend)
   
-//   async function formSend(event) {
-//     event.preventDefault();
+  async function formSend(event) {
+    event.preventDefault();
+
+    let error = formValidate(form);
   
-//     // let formData = new FormData(form);
-//     // let response = await fetch('sendmail.php', {
-//     //   method: 'POST',
-//     //   body: formData
-//     // });
-//     // let result = await response.json();
-//     // alert(result.massage);
-//     // form.reset();
-//   };
-// });
+    let formData = new FormData(form);
+    
+    if (error === 0) {
+      
+      let response = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+      });
+      if (response.ok) {
+        let result = await response.json();
+        alert(result.massage);
+        form.reset();
+      } else {
+        alert('Помилка')
+      }
+    }
+  };
+});
 
 const mobileMenu = document.querySelector('.mobile-menu'),
       nav = document.querySelector('.nav'),
@@ -45,7 +55,3 @@ acc.forEach(accButton => {
     accButton.nextElementSibling.hasAttribute('hidden')? accButton.nextElementSibling.removeAttribute('hidden'): accButton.nextElementSibling.setAttribute('hidden', '');
   });
 });
-
-
-
-
