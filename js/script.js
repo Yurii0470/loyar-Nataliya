@@ -1,34 +1,3 @@
-'use strict';
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  const form = document.getElementById('form');
-  form.addEventListener('submit', formSend)
-  
-  async function formSend(event) {
-    event.preventDefault();
-
-    let error = formValidate(form);
-  
-    let formData = new FormData(form);
-    
-    if (error === 0) {
-      
-      let response = await fetch('sendmail.php', {
-        method: 'POST',
-        body: formData
-      });
-      if (response.ok) {
-        let result = await response.json();
-        alert(result.massage);
-        form.reset();
-      } else {
-        alert('Помилка')
-      }
-    }
-  };
-});
-
 const mobileMenu = document.querySelector('.mobile-menu'),
       nav = document.querySelector('.nav'),
       navItem = document.querySelectorAll('.nav__item');
@@ -45,7 +14,6 @@ navItem.forEach((item) => {
   });
 });
 
-
 const acc = document.querySelectorAll('.accordion');
 const panel = document.querySelector('.panel');
 
@@ -55,3 +23,4 @@ acc.forEach(accButton => {
     accButton.nextElementSibling.hasAttribute('hidden')? accButton.nextElementSibling.removeAttribute('hidden'): accButton.nextElementSibling.setAttribute('hidden', '');
   });
 });
+

@@ -184,11 +184,11 @@
           <h2 class="partners__title">Партнери</h2>
           <div class="partners__list">
             <figure class="partners__item" data-aos="flip-left">
-              <img src="https://thumb.tildacdn.com/tild3833-3138-4532-a537-316465613430/-/cover/226x152/center/center/-/format/webp/LegalAid.jpg" alt="Безоплатна правова допомога">
+              <img src="img/bpd-logo.png" alt="Безоплатна правова допомога">
               <figcaption>Безоплатна правова допомога</figcaption>
             </figure>
             <figure class="partners__item" data-aos="flip-right">
-              <img src="https://thumb.tildacdn.com/tild3965-3235-4734-b037-363861336431/-/resize/518x/-/format/webp/logo_dark.png" alt="Юридична Компанія «Правова Допомога №1»">
+              <img src="img/logo_dark.png" alt="Юридична Компанія «Правова Допомога №1»">
               <figcaption> Юридична Компанія «Правова Допомога №1» </figcaption>
             </figure>
           </div>
@@ -206,30 +206,20 @@
         <div class="contacts__container" >
           <div class="form-box" data-aos="zoom-in-down">
             <div class="form-value">
-              <form id="form" action="sendmail.php" method="POST">
-
-                <!-- Hidden Required Fields -->
-                <!-- <input type="hidden" name="project_name" value="loyar Nataliya">
-                <input type="hidden" name="admin_email" value="yumelnyk0470@gmail.com">
-                <input type="hidden" name="form_subject" value="Contact form"> -->
-                <!-- END Hidden Required Fields -->
-
+              <form id="form" class="form-box">
                 <h2>Потрібна консультація?</h2>
                 <h3>Заповніть форму і ми з Вами зв'яжимося
                 </h3>
                 <div class="inputbox">
-                  <ion-icon name="mail-outline"></ion-icon>
-                  <input name="Name" type="text" required>
+                  <input name="name" type="text" required>
                   <label for="text">Ваше ім'я</label>
                 </div>
                 <div class="inputbox">
-                  <ion-icon name="lock-closed-outline"></ion-icon>
-                  <input name="Phone" type="phone" required>
+                  <input name="phone" type="phone" required>
                   <label for="phone">Телефон</label>
                 </div>
                 <div class="inputbox">
-                  <ion-icon name="lock-closed-outline"></ion-icon>
-                  <textarea name="Message" type="textarea" required ></textarea>
+                  <textarea name="message" type="textarea" required ></textarea>
                   <label for="textarea">Напишіть соє питання</label>
                 </div>
                 <button type="submit">Замовити консультацію</button>
@@ -255,18 +245,15 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__container">
-  
-      </div>
-    </footer>
   </div>
   
-    
-    <script src="js/script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+  
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

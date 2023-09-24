@@ -601,6 +601,11 @@ form button {
     padding-inline: 50px;
   }
 }
+@media (max-width: 1200px) {
+  .contacts__info {
+    justify-content: center;
+  }
+}
 @media (max-width: 1000px) {
   .intro {
     height: 100%;
