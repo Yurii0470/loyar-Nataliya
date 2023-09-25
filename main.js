@@ -11,7 +11,7 @@ $('.form-box').on('submit', function (event) {
 
 
     $('.submit', form).val('Отправка...');
-    $('input, textarea', form).attr('disabled','');
+    // $('input, textarea', form).attr('disabled','');
 
     data.append( 'name', 		$('[name="name"]', form).val() );
     data.append( 'phone', 		$('[name="phone"]', form).val() );
