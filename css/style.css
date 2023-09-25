@@ -546,6 +546,40 @@ form button {
   width: 500px;
 }
 
+.form__sendet {
+  padding: 10% 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  font-family: "Exo 2";
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.5;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(65, 137, 204, 0.411);
+  display: none;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+@media (max-width: 767px) {
+  .form__sendet {
+    font-size: calc(16px + 30.6 * ((100vw - 320) / 1200));
+  }
+}
+@media (min-width: 300px) {
+  .form__sendet {
+    font-size: calc(16px + 18 * (100vw / 1200));
+  }
+}
+
+.visible {
+  display: flex;
+}
+
 @media (min-width: 320px) {
   div[class$=__container] {
     max-width: 95%;

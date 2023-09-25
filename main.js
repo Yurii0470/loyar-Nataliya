@@ -6,7 +6,8 @@ $('.form-box').on('submit', function (event) {
     let form = this,
         submit = $('.submit', form),
         data = new FormData(),
-        files = $('input[type=file]')
+        files = $('input[type=file]'),
+        formSendet = document.querySelector('.form__sendet')
 
 
     $('.submit', form).val('Отправка...');
@@ -16,7 +17,9 @@ $('.form-box').on('submit', function (event) {
     data.append( 'phone', 		$('[name="phone"]', form).val() );
     data.append( 'message', 		$('[name="message"]', form).val() );
 
-   
+    function remoeveVisibleClass() {
+        formSendet.classList.remove('visible');
+    }
 
     files.each(function (key, file) {
         let cont = file.files;
@@ -52,12 +55,13 @@ $('.form-box').on('submit', function (event) {
             return myXhr;
         },
         error: function( jqXHR, textStatus ) {
-            // Тут выводим ошибку
+            // Тут выводим помиоку
         },
         complete: function() {
-            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
-            console.log('Complete')
+            formSendet.classList.add('visible');
+            // console.log('Complete')
             form.reset() 
+            setTimeout(remoeveVisibleClass, 4000)
         }
     });
 
