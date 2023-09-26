@@ -64,6 +64,9 @@ $maxWidth: 1200// значення без PX
 $Exo2: 'Exo 2'
 $grean:rgb(56, 162, 88)
 $blue: rgb(6, 174, 174)
+$blue2: #172a57
+$white: #fff
+$dark: #333
 
 $pattaya: 'Pattaya', sans-serif
 $bg-color: #F9F8EB
@@ -95,6 +98,7 @@ div[class$='__container']
 .header__logo
   & img
     width: 70px
+    scale: 1.5
 
 .nav
   width: 100%
@@ -149,14 +153,14 @@ div[class$='__container']
 // ===== INTRO START ===== //
 
 .intro
-  height: calc( 100dvh - 90px )
-  min-height: 650px
+  height: calc( 100dvh - 60px )
+  min-height: 450px
   background-color: #333
-  background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/intro__bg.jpg)
+  background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/bg.JPG)
   background-repeat: no-repeat
-  background-position: center
+  background-position: center center
   background-size: cover
-  transform: scaleX(-1) // розвертає картинку на 180 deg
+  // transform: scaleX(-1) // розвертає картинку на 180 deg
   
   
 
@@ -166,11 +170,11 @@ div[class$='__container']
   flex-wrap: wrap
   align-items: center
   justify-content: space-around
-  transform: scaleX(-1) 
+  // transform: scaleX(-1) 
   padding-block: 25px
 
 .intro__title
-  font-family: AnastasiaScriptC
+  font-family: $Exo2
   color: rgb(255, 255, 255)
   width: 100%
   max-width: 300px
@@ -202,6 +206,72 @@ div[class$='__container']
 
 // ===== INTRO END ===== //
 
+// ===== TEAM START ===== //
+
+.team
+  margin-top: 70px
+  font-family: 'Roboto',Arial,sans-serif
+
+.team__container
+
+.team__title
+
+
+.team__items
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  flex-wrap: wrap
+  gap: 15px
+  row-gap: 30px
+  margin-top: 30px
+
+.team__item
+  width: 100%
+  max-width: 360px
+  min-width: 300px
+  & figure
+    & img
+      width: 100%
+  & ul, p
+      line-height: 1.45
+
+.name
+  margin-top: 20px
+  color: $blue2
+  font-size: rem(21)
+  font-weight: 600
+
+.position
+  margin-top: 4px
+  font-size: 18px
+  color: #7A7A7A
+
+.line
+  margin-top: 15px
+  width: 50px
+  height: 2px
+  background-color: $blue2
+  
+.team__item-about
+  margin-top: 15px
+
+.team__item-about, .team__item-description-title
+  font-size: 18px
+  line-height: 1.45
+  font-weight: 300
+  color: #333
+
+.team__item-description-title
+  margin-top: 15px
+  font-weight: 700
+
+.team__item-description
+  & span
+    font-weight: 700
+
+// ===== TEAM END ===== //
+
 // ===== SLOGAN START ===== //
 
 .slogan
@@ -212,7 +282,7 @@ div[class$='__container']
 .slogan__title
   width: 90%
   margin-inline: auto
-  font-family: AnastasiaScriptC
+  font-family: 'AnastasiaScriptC'
   @include adapt-font(48, 36)
   color: $color3
   text-align: center
@@ -289,6 +359,7 @@ div[class$='__container']
 // ===== CERTIFICATES START ===== //
 
 .certificates
+  font-family: $Exo2
   // height: 100dvh
   background-image: linear-gradient( rgba(12, 141, 197, 0.2), rgba(255, 255, 255, 0.5))
 
@@ -307,12 +378,14 @@ div[class$='__container']
 // ===== PARTNERS START ===== //
 
 .partners
-  padding-block: 50px
+  padding-block: 25px
+  margin-top: 25px
 
 .partners__container
   font-family: $Exo2
 
-.partners__title
+.partners__title, .certificates__title, .team__title
+  font-family: $Exo2
   color: $color4
   font-size: 48px
 
@@ -322,6 +395,7 @@ div[class$='__container']
   flex-wrap: wrap
   align-items: center
   justify-content: space-around
+  gap: 50px
 
 .partners__item
   width: 100%
@@ -367,7 +441,7 @@ div[class$='__container']
 
 
 .contacts__container
-  padding-top: 100px
+  padding-top: 50px
   padding-bottom: 50px
   display: flex
   align-items: center
@@ -660,7 +734,7 @@ form
 
 @media (max-width: 1000px) 
   .intro
-    height: 100%
+    // height: 100%
     padding-block: 30px
 
 @media (max-width: 768px) 
@@ -719,7 +793,8 @@ form
 @media (max-width: 480px) 
   .contacts__location
     & iframe
-      width: 300px
+      width: 100%
+      height: 350px
 
   #form
     & h2
