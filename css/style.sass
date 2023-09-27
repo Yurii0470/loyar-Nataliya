@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6
 html, body 
   height: 100%
   line-height: 1
-
+  
 // TO %
 @function prc($pxOne, $pxTwo) 
   $result: ($pxOne / $pxTwo) * 100%
@@ -112,23 +112,40 @@ div[class$='__container']
 
 .nav__item
 
-.nav__link, .phone
+.nav__link, .phone , .address__wrapper
   text-transform: uppercase
   color: $color3
   font-weight: 600
+  font-size: 1rem
 
-.phone__wrapper
+address
+  font-style: normal
+  padding-right: 10px
+    
+.address__wrapper, .phone__wrapper
+  text-align: right
   min-width: 164.719px
   display: flex
   align-items: center
-  justify-content: space-between
+  justify-content: flex-end
   gap: 5px
-
   cursor: pointer
-  & img
+  & span
     width: 25px
     height: 25px
-    color: #76229a
+    color: rgba(9, 6, 190, 0.514)
+  & a 
+    text-align: right !important
+
+
+.header__adress
+  display: inline
+  font-weight: 500
+  text-align: center
+  & span
+    margin-right: 5px
+    margin-top: 5px
+   
 
 .mobile-menu
   cursor: pointer
@@ -152,54 +169,54 @@ div[class$='__container']
 
 // ===== INTRO START ===== //
 
-.intro
-  height: calc( 100dvh - 60px )
-  min-height: 450px
-  background-color: #333
-  background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/bg.JPG)
-  background-repeat: no-repeat
-  background-position: center center
-  background-size: cover
-  // transform: scaleX(-1) // розвертає картинку на 180 deg
+// .intro
+//   height: calc( 100dvh - 60px )
+//   min-height: 400px
+//   background-color: #333
+//   background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/bg.JPG)
+//   background-repeat: no-repeat
+//   background-position: center center
+//   background-size: cover
+//   // transform: scaleX(-1) // розвертає картинку на 180 deg
   
   
 
-.intro__container
-  height: inherit
-  display: flex
-  flex-wrap: wrap
-  align-items: center
-  justify-content: space-around
-  // transform: scaleX(-1) 
-  padding-block: 25px
+// .intro__container
+//   height: inherit
+//   display: flex
+//   flex-wrap: wrap
+//   align-items: center
+//   justify-content: space-around
+//   // transform: scaleX(-1) 
+//   padding-block: 25px
 
-.intro__title
-  font-family: $Exo2
-  color: rgb(255, 255, 255)
-  width: 100%
-  max-width: 300px
-  letter-spacing: .25rem
-  @include adapt-font(56, 36)
+// .intro__title
+//   font-family: $Exo2
+//   color: rgb(255, 255, 255)
+//   width: 100%
+//   max-width: 300px
+//   letter-spacing: .25rem
+//   @include adapt-font(56, 36)
 
-.intro__info
-  max-width: 50%
-  width: 100%
-  max-width: 360px
-  min-width: 300px
-  & ul
-    color: white
-    margin-top: rem(30)
-    @include adapt-font(24, 18)
-    & li
-      font-family: $Exo2
-      margin-top: rem(10)
+// .intro__info
+//   max-width: 50%
+//   width: 100%
+//   max-width: 360px
+//   min-width: 300px
+//   & ul
+//     color: white
+//     margin-top: rem(30)
+//     @include adapt-font(24, 18)
+//     & li
+//       font-family: $Exo2
+//       margin-top: rem(10)
 
 
-.intro__img
-  width: 100%
-  max-width: 400px
+// .intro__img
+//   width: 100%
+//   max-width: 400px
 
-  border-radius: 35% 0px 35% 0px
+//   border-radius: 35% 0px 35% 0px
 
 
   
@@ -209,7 +226,7 @@ div[class$='__container']
 // ===== TEAM START ===== //
 
 .team
-  margin-top: 70px
+  margin-top: 30px
   font-family: 'Roboto',Arial,sans-serif
 
 .team__container
@@ -218,13 +235,14 @@ div[class$='__container']
 
 
 .team__items
+  margin-top: 40px
   display: flex
   flex-direction: row
   justify-content: space-around
   flex-wrap: wrap
   gap: 15px
   row-gap: 30px
-  margin-top: 30px
+  // margin-top: 30px
 
 .team__item
   width: 100%
@@ -359,12 +377,13 @@ div[class$='__container']
 // ===== CERTIFICATES START ===== //
 
 .certificates
+  overflow: hidden
   font-family: $Exo2
   // height: 100dvh
   background-image: linear-gradient( rgba(12, 141, 197, 0.2), rgba(255, 255, 255, 0.5))
 
 .certificates__container
-  overflow: hidden
+  overflow-x: hidden
   padding-top: 50px
   display: flex
   align-items: center
@@ -610,6 +629,7 @@ form
   display: flex
   justify-content: center
   gap: 20px
+  padding-block: 10px
 
 .contacts__phone, .contacts__adress
   color: $color3
@@ -735,7 +755,7 @@ form
 @media (max-width: 1000px) 
   .intro
     // height: 100%
-    padding-block: 30px
+    // padding-block: 30px
 
 @media (max-width: 768px) 
   .header
@@ -744,9 +764,9 @@ form
     z-index: 999
   .nav__mobile-hide
     position: fixed
-    top: 90px
+    top: 115px
     width: 300px
-    height: 400px
+    height: 440px
     right: 10px
     background: transparent
     backdrop-filter: blur(15px)
@@ -804,7 +824,8 @@ form
       font-size: 1.2rem
     & .inputbox
       width: 90%
-
+  .contacts__adress
+    text-align: center
 
 
 
