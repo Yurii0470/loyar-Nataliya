@@ -385,7 +385,7 @@ address {
   font-size: 48px;
 }
 
-.contacts {
+.contacts2 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(12, 141, 197, 0.2));
 }
 
@@ -526,7 +526,7 @@ textarea:valid ~ label {
 }
 
 button {
-  width: 50%;
+  width: 80%;
   height: 40px;
   border-radius: 40px;
   border: none;
@@ -762,9 +762,6 @@ form button {
   #form h3 {
     width: 80%;
     font-size: 1.2rem;
-  }
-  #form .inputbox {
-    width: 90%;
   }
   .contacts__adress {
     text-align: center;

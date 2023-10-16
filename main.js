@@ -9,7 +9,6 @@ $('.form-box').on('submit', function (event) {
         files = $('input[type=file]'),
         formSendet = document.querySelector('.form__sendet')
 
-
     $('.submit', form).val('Отправка...');
     // $('input, textarea', form).attr('disabled','');
 

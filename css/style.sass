@@ -137,7 +137,6 @@ address
   & a 
     text-align: right !important
 
-
 .header__adress
   display: inline
   font-weight: 500
@@ -147,93 +146,20 @@ address
     margin-right: 5px
     margin-top: 5px
    
-
 .mobile-menu
   cursor: pointer
   display: none
 
 .nav__mobile-open
   margin-right: 0px
-  
-
-
 
 // ===== HEADER END ===== //
-
-// ===== MAIN START ===== //
-
-.main
-  // margin-top: 90px
-  
-
-// ===== MAIN END ===== //
-
-// ===== INTRO START ===== //
-
-// .intro
-//   height: calc( 100dvh - 60px )
-//   min-height: 400px
-//   background-color: #333
-//   background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(../img/bg.JPG)
-//   background-repeat: no-repeat
-//   background-position: center center
-//   background-size: cover
-//   // transform: scaleX(-1) // розвертає картинку на 180 deg
-  
-  
-
-// .intro__container
-//   height: inherit
-//   display: flex
-//   flex-wrap: wrap
-//   align-items: center
-//   justify-content: space-around
-//   // transform: scaleX(-1) 
-//   padding-block: 25px
-
-// .intro__title
-//   font-family: $Exo2
-//   color: rgb(255, 255, 255)
-//   width: 100%
-//   max-width: 300px
-//   letter-spacing: .25rem
-//   @include adapt-font(56, 36)
-
-// .intro__info
-//   max-width: 50%
-//   width: 100%
-//   max-width: 360px
-//   min-width: 300px
-//   & ul
-//     color: white
-//     margin-top: rem(30)
-//     @include adapt-font(24, 18)
-//     & li
-//       font-family: $Exo2
-//       margin-top: rem(10)
-
-
-// .intro__img
-//   width: 100%
-//   max-width: 400px
-
-//   border-radius: 35% 0px 35% 0px
-
-
-  
-
-// ===== INTRO END ===== //
 
 // ===== TEAM START ===== //
 
 .team
   margin-top: 30px
   font-family: 'Roboto',Arial,sans-serif
-
-.team__container
-
-.team__title
-
 
 .team__items
   margin-top: 40px
@@ -243,7 +169,6 @@ address
   flex-wrap: wrap
   gap: 15px
   row-gap: 30px
-  // margin-top: 30px
 
 .team__item
   width: 100%
@@ -352,10 +277,6 @@ address
   overflow: hidden
   width: 100%
   max-width: 620px
-  // transform: translateX(25%)
-  // text-align: center
-  // max-width: 750px
-  // margin-inline: auto
   &:last-child
     border-bottom: 1px solid black
 
@@ -369,22 +290,18 @@ address
   border-top: 1px solid black
   // margin-inline: auto
 
-
 .panel
   display: block
   transition: max-height 1s ease
-  
 
 .text__wrapper
   padding: 10px
-  // width: 70%
   & p
   & ul
     padding-left: 15px
     & li
       list-style: disc
     
-
 // ===== SERVICES END ===== //
 
 // ===== CERTIFICATES START ===== //
@@ -392,7 +309,6 @@ address
 .certificates
   overflow: hidden
   font-family: $Exo2
-  // height: 100dvh
   background-image: linear-gradient( rgba(12, 141, 197, 0.2), rgba(255, 255, 255, 0.5))
 
 .certificates__container
@@ -411,7 +327,6 @@ address
 
 .partners
   padding-block: 25px
-  // margin-top: 25px
   background-image: linear-gradient(rgba(12, 141, 197, 0.2), rgba(255, 255, 255, 0.5))
 
 .partners__container
@@ -468,10 +383,8 @@ address
 
 // ===== CONTACTS START ===== //
 
-.contacts
-  // height: 100dvh
+.contacts2
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(12, 141, 197, 0.2))
-
 
 .contacts__container
   padding-top: 50px
@@ -518,7 +431,6 @@ h3
   color: $color3
   text-align: center
 
-
 .inputbox
   position: relative
   width: 100%
@@ -560,7 +472,6 @@ h3
   & label
     top: 15px
     
-
   & ion-icon
     position: absolute
     right: 8px
@@ -592,7 +503,7 @@ textarea:valid ~ label
       &:hover
         text-decoration: underline
 button
-  width: 50%
+  width: 80%
   height: 40px
   border-radius: 40px
   border: none
@@ -627,13 +538,6 @@ form
   align-items: center
   gap: 10px
 
-.contacts__info
-  // width: 80%
-  // display: flex
-  // align-items: center
-  // justify-content: space-between
-  // flex-wrap: wrap
-
 .contacts__title
   color: $color3
   font-size: 32px
@@ -650,7 +554,6 @@ form
   font-size: 1.2rem
   font-family: $Exo2
 
-
 .social__img
   width: 45px
   height: 45px
@@ -661,17 +564,13 @@ form
   & iframe
     width: 500px
     
-
 // ===== CONTACTS END ===== //
-
 
 // ===== FOOTER START ===== //
 
 .footer
 
 .footer__container
-
-
 
 // ===== FOOTER END ===== //
 
@@ -695,13 +594,9 @@ form
   backdrop-filter: blur(15px)
 
 .form__sendet-text
-  // color: $bg-color
 
 .visible
   display: flex
-
-
-
 
 //----- АДАПТИВ ------//
 
@@ -753,18 +648,11 @@ form
     max-width: 1340px
     padding-inline: 50px
 
-
-
-
-
-
 @media (max-width: 1440px) 
-
 
 @media (max-width: 1200px) 
   .contacts__info
     justify-content: center
-
 
 @media (max-width: 1000px) 
   .intro
@@ -798,8 +686,6 @@ form
   .nav__mobile-open
     margin-top: 0px
       
-
-    
   .mobile-menu
     display: block
 
@@ -840,7 +726,7 @@ form
       width: 80%
       font-size: 1.2rem
     & .inputbox
-      width: 90%
+      // width: 90%
   .contacts__adress
     text-align: center
   .slogan__container
